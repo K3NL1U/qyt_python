@@ -3,5 +3,5 @@
 
 
 result = 1 + 2
-print(result)
+print('计算结果为:'+str(result))
 
