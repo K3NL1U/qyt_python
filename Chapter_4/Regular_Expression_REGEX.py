@@ -10,7 +10,7 @@ res = re.match('\s*(\w.*\d)\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+(YES|NO)\s+
                 (up|down)\s*',str1).groups()
 
 print('=' * 35)
-print('{0:<10}: {1}'.format('接口',res[0]))
-print('{0:<10}: {1}'.format('IP地址',res[1]))
-print('{0:<10}: {1}'.format('状态',res[4]))
+print('{0:<7}: {1}'.format('接口',res[0]))
+print('{0:<7}: {1}'.format('IP地址',res[1]))
+print('{0:<7}: {1}'.format('状态',res[4]))
 
