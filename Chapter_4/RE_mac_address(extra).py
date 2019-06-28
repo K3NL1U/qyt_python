@@ -13,4 +13,3 @@ print('{0:<10}: {1}'.format('VLAN ID',res[0]))
 print('{0:<10}: {1}'.format('MAC',res[1]))
 print('{0:<10}: {1}'.format('Type',res[2]))
 print('{0:<10}: {1}'.format('Interface',res[3]))
-
