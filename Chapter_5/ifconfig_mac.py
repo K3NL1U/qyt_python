@@ -10,6 +10,6 @@ ifconfig_result = 'eno33554944: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 
                 RX errors 0  dropped 0  overruns 0  frame 0\n        TX packets 33  bytes 4290 (4.1 KiB)\n  \
                       TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\n\n'
 
-res = re.findall('[a-z0-9]{2}\:[a-z0-9]{2}\:[a-z0-9]{2}\:[a-z0-9]{2}\:[a-z0-9]{2}\:[a-z0-9]{2}', ifconfig_result)
+res = re.findall('[a-z0-9]{2}:[a-z0-9]{2}:[a-z0-9]{2}:[a-z0-9]{2}:[a-z0-9]{2}:[a-z0-9]{2}', ifconfig_result)
 
 print('MAC地址为:', res[0])
