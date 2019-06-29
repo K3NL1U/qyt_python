@@ -15,12 +15,12 @@ re_findall_result = re.findall('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', ifconfig_re
 for ip in re_findall_result:
     if ip.split('.')[-1] == '0':
         mask = ip
-    elif ip.split('.') == '255':
+    elif ip.split('.')[-1] == '255':
         broadcast = ip
     else:
         ipv4_ip = ip
 
-print('{0:>10} : {1}'.format('Network Mask', mask))
-print('{0:>10} : {1}'.format('Broadcast', broadcast))
-print('{0:>10} : {1}'.format('IPv4 Addr', ipv4_ip))
+print('{0:>15} : {1}'.format('Network Mask', mask))
+print('{0:>15} : {1}'.format('Broadcast', broadcast))
+print('{0:>15} : {1}'.format('IPv4 Addr', ipv4_ip))
 

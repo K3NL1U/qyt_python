@@ -6,4 +6,4 @@ performances = {'weekdays': ['Bearded Lady', 'Tiniest Man', 'Ventriloquist Vinni
                 'saturday': ['Amazing Acrobatics', 'Enchanted Elephants'],\
                 'sunday': ['Snake Charmer', 'Amazing Acrobatics']}
 
-print(performances.get('weekdays', 0))
+print(performances.get('weekdays', 0)[2])
