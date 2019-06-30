@@ -25,7 +25,6 @@ qytang3.close()
 os.mkdir('qytang4')
 os.mkdir('qytang5')
 
-os.chdir('test')
 filelist = os.listdir(os.getcwd())
 
 files = []
