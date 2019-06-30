@@ -22,7 +22,7 @@ print(dict1)
 
 print('\n\n格式化打印输出\n')
 for key, value in dict1.items():
-    print('{0:>10} : {1:<15}\t|\t{2:>10} : {3:<10}\t|\t{4:>10} : {5:<15}\t|\t{6:>10} : {7:<10}'.format('src', key[0],\
+    print('{0:>10} : {1:<15}\t|\t{2:>10} : {3:<10}\t|\t{4:>10} : {5:<15}\t|\t{6:>10} : {7:<10}|'.format('src', key[0],\
         'src_p', key[1], 'dst', key[2], 'dst_p', key[3]))
     print('{0:>10} : {1:<15}\t|\t{2:>10} : {3:<10}'.format('bytes', value[0], 'flags', value[1]))
-    print('=' * 120)
+    print('=' * 125)
