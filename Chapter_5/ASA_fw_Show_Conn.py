@@ -11,7 +11,7 @@ lst = show_conn.split('\n')
 
 dict1 = {}
 for i in lst:
-    res = re.match('.*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d{1,5}).*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):'
+    res = re.match('.*\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d{1,5}).*\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):'
         '(\d{1,5}).*bytes\s+(\d+).*flags\s+(\w*)\s*', i).groups()
     key = res[0], res[1], res[2], res[3]
     value = res[4], res[5]
@@ -22,7 +22,7 @@ print(dict1)
 
 print('\n\n格式化打印输出\n')
 for key, value in dict1.items():
-    print('%10s : %-20s |%10s : %-10s |%10s : %-10s|%10s : %-10s|' % (
-        "src", key[0], "src_p", key[1], "dst", key[2], "dst_p", key[3]))
-    print('%10s : %-20s |%10s : %-10s' % ('bytes', value[0], 'flags', value[1]))
-    print('=' * 110)
+    print('{0:>10} : {1:<15}\t|\t{2:>10} : {3:<10}\t|\t{4:>10} : {5:<15}\t|\t{6:>10} : {7:<10}'.format('src', key[0],\
+        'src_p', key[1], 'dst', key[2], 'dst_p', key[3]))
+    print('{0:>10} : {1:<15}\t|\t{2:>10} : {3:<10}'.format('bytes', value[0], 'flags', value[1]))
+    print('=' * 120)
