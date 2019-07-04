@@ -8,8 +8,8 @@ from scapy.all import *
 
 
 def ping(ip):
-    ping_pkt = IP(dst = ip) / ICMP()
-    ping_result = sr1(ping_pkt, timeout = 2, verbose = False)
+    ping_pkt = IP(dst=ip) / ICMP()
+    ping_result = sr1(ping_pkt, timeout=2, verbose=False)
     if ping_result:
         return ip, 1
     else:
@@ -17,9 +17,8 @@ def ping(ip):
 
 
 if __name__ == '__main__':
-    result = ping('137.78.5.254')
+    result = ping('10.0.0.5')
     if result[1]:
         print(result[0], '通！')
     else:
         print(result[0], '不通！')
-
