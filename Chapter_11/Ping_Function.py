@@ -17,7 +17,7 @@ def ping(ip):
 
 
 if __name__ == '__main__':
-    result = ping('137.78.5.254')
+    result = ping('10.0.0.31')
     if result[1]:
         print(result[0], '通！')
     else:
