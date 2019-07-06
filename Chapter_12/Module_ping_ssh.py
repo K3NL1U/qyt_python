@@ -2,4 +2,8 @@
 # https://gitee.com/K3NL1U
 
 
-from
+from Ping_Function import ping
+from SSH_Function import qytang_ssh
+
+
+
