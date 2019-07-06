@@ -17,7 +17,7 @@ def ping_and_ssh(ip_list, username, password, cmd):
 
 
 if __name__ == '__main__':
-    ip_list = ['172.16.1.102', '172.16.1.111']
+    ip_list = ['10.0.0.31']
     username = 'root'
     password = 'Cisc0123'
     ping_and_ssh(ip_list, username, password, 'ls')
