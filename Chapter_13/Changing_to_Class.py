@@ -3,19 +3,53 @@
 
 
 import logging
-logging.getLogger('scapy.runtime').setLevel(logging.ERROR)
-from scapy.all import *
+logging.getLogger('kamene.runtime').setLevel(logging.ERROR)
+from kamene.all import *
 
-class Qytang_ping:
+class Ping:
     def __int__(self, ip):
         self.ip = ip
         self.srcip = None
         self.length = 100
-        self.pkt = IP(dst=self.ip, scr=self.scrip) / ICMP() / (b'v' * self.length)
+        self.pkt = IP(dst=self.ip, src=self.srcip,) / ICMP() / (b'v' * self.length)
 
     def src(self, srcip):
         self.srcip = srcip
-        self.pkt = IP(dst=self.ip, src)
+        self.pkt = IP(dst=self.ip, src=self.srcip,) / ICMP() / (b'v' * self.length)
 
-if __name__ == '__main__':
-    pass
+    def size(self, length):
+        self.length = length
+        self.pkt = IP(dst=self.ip, src=self.srcip, ) / ICMP() / (b'v' * self.length)
+
+    def one(self):
+        result = sr1(self.pkt, timeout=1, verbose=False)
+        if result:
+            print(self.ip, '可达！')
+        else:
+            print(self.ip, '不可达！')
+
+    def ping(self):
+        for i in range(5):
+            result = sr1(self.pkt, timeout=1, verbose=False)
+            if result:
+                print('!', end='', flush=True)
+            else:
+                print('.', end='', flush=True)
+            print()
+
+    def __str__(self):
+        if not self.srcip:
+            return '<dstip: {0}, size: {1}>'.format(self.ip, self.length)
+        else:
+            return '<srcip: {0}, dstip: {1}, size: {2}>'.format(self.srcip, self.ip, self.length)
+
+
+class NewPing(Ping):
+    def ping(self):
+        for i in range(5):
+            result = sr1(self.pkt, timeout=1, verbose=False)
+            if result:
+                print('+', end='', flush=True)
+            else:
+                print('?', end='', flush=True)
+        print()
