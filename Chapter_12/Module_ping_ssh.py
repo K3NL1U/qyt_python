@@ -18,7 +18,7 @@ def ping_and_ssh(ip_list, username, password, cmd):
 
 
 if __name__ == '__main__':
-    ip_list = ['10.0.0.34', '10.0.0.69']
+    ip_list = ['10.0.0.34', '10.0.0.69']  # 10.0.0.69 doesn't exist, 10.0.0.34 is the Clear Linux
     username = 'ken'
     password = 'Cisc0123'
     ping_and_ssh(ip_list, username, password, 'ls')
