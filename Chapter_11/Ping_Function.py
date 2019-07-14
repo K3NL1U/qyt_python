@@ -3,8 +3,8 @@
 
 
 import logging
-logging.getLogger('scapy.runtime').setLevel(logging.ERROR)
-from scapy.all import *
+logging.getLogger('kamene.runtime').setLevel(logging.ERROR)
+from kamene.all import *
 
 
 def ping(ip):
@@ -17,7 +17,7 @@ def ping(ip):
 
 
 if __name__ == '__main__':
-    result = ping('10.0.0.31')
+    result = ping('10.0.0.34')
     if result[1]:
         print(result[0], '通！')
     else:
