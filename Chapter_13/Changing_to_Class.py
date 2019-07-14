@@ -44,7 +44,7 @@ class OldPing:
             return '<srcip: {0}, dstip: {1}, size: {2}>'.format(self.srcip, self.ip, self.length)
 
 
-class NewPing(Ping):
+class NewPing(OldPing):
     def ping(self):
         for i in range(5):
             result = sr1(self.pkt, timeout=1, verbose=False)
