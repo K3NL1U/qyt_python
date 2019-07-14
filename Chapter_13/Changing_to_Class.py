@@ -6,7 +6,7 @@ import logging
 logging.getLogger('kamene.runtime').setLevel(logging.ERROR)
 from kamene.all import *
 
-class Ping:
+class OldPing:
     def __int__(self, ip):
         self.ip = ip
         self.srcip = None
