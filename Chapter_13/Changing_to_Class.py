@@ -7,7 +7,7 @@ logging.getLogger('kamene.runtime').setLevel(logging.ERROR)
 from kamene.all import *
 
 class QYT_PING:
-    def __int__(self, ip):
+    def __init__(self, ip):
         self.ip = ip
         self.srcip = None
         self.length = 100
