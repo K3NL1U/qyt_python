@@ -14,6 +14,7 @@ def ping(ip):
     else:
         return ip, 0
 
+
 if __name__ == '__main__':
     import sys
     result = ping(sys.argv[1])
