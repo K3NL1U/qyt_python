@@ -19,4 +19,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # print(ssh(args.ipaddr, args.username, args.password, cmd=args.command))
+    print(ssh(args.ipaddr, args.username, args.password, cmd=args.command))
