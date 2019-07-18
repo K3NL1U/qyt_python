@@ -43,6 +43,7 @@ class QYT_PING:
         else:
             return '<srcip: {0}, dstip: {1}, size: {2}>'.format(self.srcip, self.ip, self.length)
 
+
 if __name__ == '__main__':
     ping = QYT_PING('10.0.0.34')  # Does exist, Clear Linux
     # ping = QYT_PING('192.168.10.69')  # Doesn't exist
