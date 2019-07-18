@@ -46,5 +46,7 @@ class QYT_PING:
 if __name__ == '__main__':
     ping = QYT_PING('10.0.0.34')  # Does exist, Clear Linux
     # ping = QYT_PING('192.168.10.69')  # Doesn't exist
+    # ping.size(200)  # Increasing the size of the package
+    # ping.src('172.16.1.10')  # Doesn't exist
     ping.one()
     ping.ping()
