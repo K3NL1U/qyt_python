@@ -6,8 +6,9 @@ from Ping_Function import ping
 from multiprocessing.pool import ThreadPool
 import ipaddress
 
+
 def ping_scan(network):
-    pool = ThreadPool(Processes=150)
+    pool = ThreadPool(processes=150)
     net = ipaddress.ip_network(network)
 
     result_obj_dict = {}
