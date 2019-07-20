@@ -17,7 +17,7 @@ def ssh(ip, username, password, port=22, cmd='ls'):
     except paramiko.ssh_exception.AuthenticationException as e:
         print('认证错误', e)
     except Exception as e:
-        print('{0}{1}' % (ip, e))
+        print('{0}Error{1}'.format(ip, e))
 
 
 if __name__ == '__main__':
